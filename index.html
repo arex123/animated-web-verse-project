@@ -5,9 +5,82 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <style>
+       /* .loader-container {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: grid;
+      place-content: center;
+      transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    }
+
+    .loader-container.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    #root {
+      opacity: 0;
+      transform: translate3d(0, 0, 0);
+      transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+    #root.visible {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    .loading-svg {
+      width: 25rem;
+      font-weight: 700;
+    }
+    .loading-svg text {
+      font-size: 5rem;
+      stroke-width: 2;
+      letter-spacing: -6px;
+    }
+    .loading-svg text.text-body {
+      stroke: rgb(35, 41, 70);
+      animation: 4s infinite alternate animate-stroke;
+    }
+
+    @keyframes animate-stroke {
+      0% {
+        fill: transparent;
+        stroke: rgb(35, 41, 70);
+        stroke-width: 3;
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 32%;
+      }
+
+      50% {
+        fill: transparent;
+        stroke: rgb(35, 41, 70);
+        stroke-width: 3;
+      }
+
+      80%,
+      100% {
+        fill: rgb(35, 41, 70);
+        stroke: transparent;
+        stroke-width: 0;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 32% 0;
+      }
+    } */
+    </style>
   </head>
   <body>
+    <!-- <div class="loader-container">loading</div> -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // const loaderCont = document.querySelector(".loader-container");
+      // const pageContent = document.querySelector("#root");
+      // window.addEventListener("load", () => {
+      //   loaderCont.classList.add("hidden");
+      //   pageContent.classList.add("visible");
+      // });
+    </script>
   </body>
 </html>
