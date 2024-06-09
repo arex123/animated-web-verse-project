@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="sidebar">
-        <div onClick={() => setOpenSidebar(!openSidebar)} className="menu-open" >
+        <div onClick={() => setOpenSidebar(!openSidebar)} className={`menu-open ${openSidebar?'undoBorberHover':''}`} >
           <div>
             <svg
               width="28"
@@ -37,7 +37,7 @@ const Navbar = () => {
             </svg>
           </div>
           {openSidebar && (
-            <div className="sidebar-drawer">
+            <div className={`sidebar-drawer ${openSidebar?'sidebar-drawer-enable':''}`}>
               <div className="sidebar-drawer_left">
                 <div>
                   <span className="discover-text-1">DISCOVER</span>
