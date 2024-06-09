@@ -1,0 +1,17 @@
+span[class*="discover-text-"] {
+    font-size: 0.5rem;
+    margin-left: 25px;
+    width: 30%;
+    // margin-top: 30px;
+    
+    
+    &::before {
+        display: inline-block;
+        content: "";
+        margin-right: 10px;
+        width: 6px;
+        height: 6px;
+        background-color: white;
+        
+    }
+}
