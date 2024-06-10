@@ -1,53 +1,106 @@
 import { useEffect, useState } from "react";
 import "./navbar.scss";
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react';
-// import { SplitText } from "gsap/all";
-import {SplitText} from '../../assets/gsap-splittext.js'
+import { gsap } from "gsap";
+import { Observer } from "gsap/Observer";
+// import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(Observer);
 
 const Navbar = () => {
-  const [openSidebar, setOpenSidebar] = useState(true);
+  const [openSidebar, setOpenSidebar] = useState(false);
 
+  useEffect(() => {
+    if (openSidebar == false) return;
 
-  useEffect(()=>{
+    let doc = document.querySelector(".sidebar-menu-1");
 
-    let doc = document.querySelector(".sidebar-menu-1")
-    doc.style.background="red"
-    let originalText  = doc.innerHTML
+    Observer.create({
+      target: doc, // can be any element (selector text is fine)
+      type: "wheel,touch", // comma-delimited list of what to listen for ("wheel,touch,scroll,pointer")
+      onClick: () => {console.log("text got hovered")},
+    });
 
-    let newEle = document.createElement("div")
-    for(let i=0;i<originalText.length;i++) {
-      let newTextElement = document.createElement('span')
-      newTextElement.innerHTML = originalText[i]
-      newEle.append(newTextElement)
+    doc.style.background = "red";
+    let originalText = doc.innerHTML;
+
+    let newEle = document.createElement("div");
+    for (let i = 0; i < originalText.length; i++) {
+      let newTextElement = document.createElement("span");
+      newTextElement.innerHTML = originalText[i];
+      newEle.append(newTextElement);
     }
 
     // let splitText = new SplitText(doc)
-    console.log("%%%%%%% splittext : ",originalText.length);
-    console.log("newEle :",newEle)
-    doc.innerHTML = ""
-    doc.append(newEle)
+    doc.innerHTML = "";
+    doc.append(newEle);
 
-    
+    let elements = doc.querySelector("div").querySelectorAll("span");
 
-    // doc.addEventListener('mouseover',(event)=>{
-    //   console.log("entering")
+    console.log(" sss :", elements);
+    // let mainTimeline = gsap.timeline({
+    // repeat:-1 //infinite repeat
     // })
 
-    // doc.addEventListener('mouseleave',()=>{
-    //   console.log("leaving")
+    const timeline = gsap.timeline({ repeat: 1 }); // Infinite loop
+
+    let chars = ["A", "B", "C", "D"];
+    console.log(chars);
+    console.log(elements[0]);
+
+    timeline.to(elements[0], {
+      text: "*", // Random char
+      color:"green",
+      duration: 1,
+      ease: "power3.out",      
+    });
+    timeline.play();
+
+
+    // for(let i=0;i<elements.length;i++) {
+
+    // let chars = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',]
+
+    // timeline.to(elements[i], {
+    //   text: chars[Math.floor(Math.random() * chars.length)], // Random char
+    //   duration: 1,
+    //   ease: "bounce.out", // Adjust easing as needed
+    // });
+    // chars.forEach(ch=>{
+    // console.log("ch ",ch)
+    // let textTimeLine = gsap.timeline({
+    //   repeat:1,
+    //   yoyo:true,
+    //   repeatDelay:2
+    // })
+    // timeline.to(elements[i], {
+    //   text: chars[Math.floor(Math.random() * chars.length)], // Random char
+    //   duration: 1,
+    //   ease: "bounce.out", // Adjust easing as needed
+    // });
+
+    // textTimeLine.to(elements[i],{
+    //   text:ch,
+    //   duration:1,
+
     // })
 
-    
+    // mainTimeline.add(textTimeLine)
 
-  },[])
+    // })
 
+    // }
 
-  
+    return () => timeline.kill();
+
+  }, [openSidebar]);
+
   return (
     <div className="navbar">
       <div className="sidebar">
-        <div onClick={() => setOpenSidebar(!openSidebar)} className={`menu-open ${openSidebar?'undoBorberHover':''}`} >
+        <div
+          onClick={() => setOpenSidebar(!openSidebar)}
+          className={`menu-open ${openSidebar ? "undoBorberHover" : ""}`}
+        >
           <div>
             <svg
               width="28"
@@ -74,7 +127,11 @@ const Navbar = () => {
             </svg>
           </div>
           {openSidebar && (
-            <div className={`sidebar-drawer ${openSidebar?'sidebar-drawer-enable':''}`}>
+            <div
+              className={`sidebar-drawer ${
+                openSidebar ? "sidebar-drawer-enable" : ""
+              }`}
+            >
               <div className="sidebar-drawer_left">
                 <div>
                   <span className="discover-text-1">DISCOVER</span>
@@ -106,11 +163,14 @@ const Navbar = () => {
                 </div>
               </div>
               <div className="sidebar-drawer_right">
-                <div onClick={() => setOpenSidebar(!openSidebar)} className="sidebar-drawer_right_close-x">
+                <div
+                  onClick={() => setOpenSidebar(!openSidebar)}
+                  className="sidebar-drawer_right_close-x"
+                >
                   <span id="cross-line-1"></span>
                   <span id="cross-line-2"></span>
                 </div>
-                <div className="sidebar-drawer_right_middle-icon">                  
+                <div className="sidebar-drawer_right_middle-icon">
                   <svg
                     width="48"
                     height="75"
