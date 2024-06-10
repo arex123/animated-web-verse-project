@@ -1,12 +1,49 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./navbar.scss";
-const Navbar = () => {
-  const [openSidebar, setOpenSidebar] = useState(false);
-  console.log(openSidebar)
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react';
+// import { SplitText } from "gsap/all";
+import {SplitText} from '../../assets/gsap-splittext.js'
 
-  function calling(){
-    console.log("hi")
-  }
+const Navbar = () => {
+  const [openSidebar, setOpenSidebar] = useState(true);
+
+
+  useEffect(()=>{
+
+    let doc = document.querySelector(".sidebar-menu-1")
+    doc.style.background="red"
+    let originalText  = doc.innerHTML
+
+    let newEle = document.createElement("div")
+    for(let i=0;i<originalText.length;i++) {
+      let newTextElement = document.createElement('span')
+      newTextElement.innerHTML = originalText[i]
+      newEle.append(newTextElement)
+    }
+
+    // let splitText = new SplitText(doc)
+    console.log("%%%%%%% splittext : ",originalText.length);
+    console.log("newEle :",newEle)
+    doc.innerHTML = ""
+    doc.append(newEle)
+
+    
+
+    // doc.addEventListener('mouseover',(event)=>{
+    //   console.log("entering")
+    // })
+
+    // doc.addEventListener('mouseleave',()=>{
+    //   console.log("leaving")
+    // })
+
+    
+
+  },[])
+
+
+  
   return (
     <div className="navbar">
       <div className="sidebar">
@@ -42,7 +79,7 @@ const Navbar = () => {
                 <div>
                   <span className="discover-text-1">DISCOVER</span>
                   <ul className="sidebar-menu">
-                    <li>Story</li>
+                    <li className="sidebar-menu-1">Story</li>
                     <li>protocol</li>
                     <li>journal</li>
                     <li>media</li>
