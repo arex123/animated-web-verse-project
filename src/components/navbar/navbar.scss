@@ -8,6 +8,10 @@
     height: 95vh;
     display: flex;
     overflow: hidden;
+    border-right: 1px solid grey;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid grey;
+    border-bottom-left-radius: 10px;
 
     .sidebar {
         // border-right: 1px solid grey;;        
@@ -23,6 +27,7 @@
             border-top-left-radius: 10px;
             
             border: 1px solid grey;
+            // border-top:none ;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -262,6 +267,7 @@
             border: 1px solid grey;
             border-top: none;
             border-bottom-left-radius: 10px;
+            border-bottom: none;
             height: 50px;
             display: flex;
             align-items: center;
@@ -273,6 +279,7 @@
         height: 50px;
         border: 1px solid grey;
         border-left: 0;
+        border-right: none;
         border-top-right-radius: 10px;
         width: 100%;
 
