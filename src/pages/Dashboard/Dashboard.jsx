@@ -113,7 +113,10 @@ const Dashboard = () => {
       opacity: 1,
     });
 
-    gsap.to(".w23Xvfvf", {
+    gsap.fromTo(".w23Xvfvf",{
+      yPercent: 100,
+    },
+     {
       scrollTrigger: {
         trigger: ".screen-2",
         start: "55vh top",
@@ -121,7 +124,7 @@ const Dashboard = () => {
         markers: false,
         scrub: true,
       },
-      yPercent: -200,
+      yPercent: 0,
       opacity: 1,
     });
     gsap.to(".w23Xvfvd", {
@@ -147,20 +150,6 @@ const Dashboard = () => {
       opacity: 1,
     });
 
-    // gsap.to('.img_saviour_screen-2',{
-    //   scrollTrigger: {
-    //     trigger: ".screen-2",
-    //     start: "55vh top",
-    //     end: "bottom 75%",
-    //     scrub: true,
-    //     markers:true
-    //   },
-    //   left:0,
-    //   scale:2,
-    //   rotationY:90,
-    //   // transformPerspective:1000,
-    //   opacity:1
-    // })
     gsap.fromTo(
       ".img_saviour_screen-2",
       {
@@ -183,6 +172,52 @@ const Dashboard = () => {
         opacity: 1,
       }
     );
+
+    
+    let screen3TL = gsap.timeline({
+      scrollTrigger:{
+        trigger: ".screen-3",
+        start: "55vh top",
+        end: "bottom 75%",
+        scrub: true,
+        markers: true,
+      },
+
+    })
+  
+    screen3TL.to('.w23Xvfvf',{
+      yPercent:-400,
+      opacity:0
+    })
+    screen3TL.to('.desc_screen-2',{
+      opacity:0,
+    },'<')
+
+    screen3TL.to('.w23Xvfvd',{
+      yPercent:-600,
+      opacity:0
+    },'<')
+    screen3TL.to('.img-desc_screen-2',{
+      yPercent:-100,
+      opacity:0
+    },'<')
+
+    screen3TL.to('.screen-2-wrap',{
+      opacity:0      
+    },'<')
+
+    screen3TL.to('.img_saviour_screen-2',{
+      yPercent:-10,
+      transformOrigin: "top center",
+      rotationY:90
+    },'<')
+
+    screen3TL.to('.screen-2',{
+      display:'none'
+    })
+
+
+
   }, []);
 
   return (
@@ -243,11 +278,11 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="screen-3"></div>
-      <div className="screen-4"></div>
-      <div className="screen-4"></div>
-      <div className="screen-4"></div>
-      <div className="screen-4"></div>
+      <div className="screen-3">screen 3</div>
+      <div className="screen-4">screen 4</div>
+      <div className="screen-4">screen 5</div>
+      <div className="screen-4">screen 6</div>
+      <div className="screen-4">screen 7</div>
     </div>
   );
 };
