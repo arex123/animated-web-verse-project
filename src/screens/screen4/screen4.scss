@@ -1,0 +1,214 @@
+.screen4 {
+    p {
+        margin: 0;
+    }
+
+    text-transform: uppercase;
+    min-height: 100vh;
+    position: relative;
+    z-index: 190px;
+    display: grid;
+    // padding-top: 20%;
+    grid-template-columns:70% 30%;
+    // grid-template-rows:70% 70%;
+    grid-auto-rows: min(50%);
+    color: white;
+
+    opacity: 0;
+
+    [class^="box-vfafbdf"] {
+        border: 0.5px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 0.3px solid rgba(255, 255, 255, 0.7);
+        border-top: 0.3px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .box-vfafbdf-1 {
+        padding: 40px;
+        font-size: 40px;
+        font-weight: bolder;
+        border-bottom: 0;
+
+        .line1-box-vfafbdf {
+            display: flex;
+            gap: 40px;
+
+
+            .index_title_screen-4_pre {
+                font-size: 12px;
+                font-weight: 500;
+                align-self: flex-start;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 5px;
+                    width: 5px;
+                    background: white;
+                }
+            }
+
+            .index_title_screen-4_post {
+                font-size: 42px;
+            }
+        }
+    }
+
+
+    .box-vfafbdf-2 {
+        padding: 50px;
+        font-size: 8px;
+        border-bottom: 0;
+        opacity: 0;
+
+
+        & p:nth-child(3) {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    }
+
+    .box-vfafbdf-4 {
+        padding: 50px;
+        font-size: 8px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        .right-box-vfafbdf-4 {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+
+            .right-box-vfafbdf-4-icon {
+                display: flex;
+
+                [class^='poin-'] {
+                    background-color: white;
+                    height: 8px;
+                    width: 8px;
+                    margin-left: 2px;
+
+                }
+
+                .poin-2 {
+                    opacity: 0.7;
+                }
+
+                .poin-3 {
+                    opacity: 0.5;
+                }
+            }
+        }
+
+
+        .middle-box-vfafbdf-4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+
+            & #bannerVideo {
+                height: 100%;
+                width: 100%;
+
+            }
+        }
+
+    }
+
+    .down-screen4 {
+        grid-column: 1/-1;
+        // width: 100%;
+        display: grid;
+        grid-template-columns: 30% repeat(2, 1fr);
+        grid-auto-rows: 100% 300%;
+        // grid-template-rows: 500px 1000px;
+
+        .box-vfafbdf-5 {
+            // transform: rotateY(60deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            .line-box-vfafbdf-5 {
+                background-color: rgba(255, 255, 255, 0.6);
+                width: 100%;
+                height: 1px;
+                transform: rotateZ(-50deg) scaleX(2.5);
+            }
+
+        }
+
+        .box-vfafbdf-6 {
+            grid-column: 2/-1;
+        }
+    }
+
+}
+
+.content_box-vfafbdf-6{
+
+    padding: 40px;
+    font-size: 40px;
+    font-weight: bolder;
+}
+.content_1_box-vfafbdf-6 {
+    display: flex;
+    gap: 40px;
+}
+
+.pre_content_1_box-vfafbdf-6 {
+    font-size: 12px;
+    font-weight: 500;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        background: white;
+    }
+}
+
+.box-vfafbdf-8{
+
+    padding: 40px;
+}
+.pre_content_1_box-vfafbdf-8{
+    font-size: 12px;
+    font-weight: 500;
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    width: 23%;
+    // background-color: red;
+    gap: 8px;
+    
+    
+    &::before {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 5px;
+        background: white;
+        align-self: flex-start;
+        position: relative;
+        top: 5px;
+    }
+    
+}

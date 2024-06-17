@@ -2,6 +2,10 @@ import "./dashboard.scss";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
+import Screen4 from "../../screens/screen4/Screen4";
+import Screen5 from "../../screens/screen5/Screen5";
+import Screen6 from "../../screens/screen6/Screen6";
+import Screen7 from "../../screens/screen7/Screen7";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,10 +181,10 @@ const Dashboard = () => {
     let screen3TL = gsap.timeline({
       scrollTrigger:{
         trigger: ".screen-3",
-        start: "55vh top",
+        start: "55vh center",
         end: "bottom 75%",
         scrub: true,
-        markers: true,
+        markers: false,
       },
 
     })
@@ -207,9 +211,10 @@ const Dashboard = () => {
     },'<')
 
     screen3TL.to('.img_saviour_screen-2',{
-      yPercent:-10,
-      transformOrigin: "top center",
-      rotationY:90
+      yPercent:-5,
+      transformOrigin: "center center",
+      rotationY:90,
+      scale:0.7
     },'<')
 
     screen3TL.to('.screen-2',{
@@ -228,6 +233,7 @@ const Dashboard = () => {
           src="https://pbs.twimg.com/media/GP6D5CyXkAAIUKO?format=jpg&name=4096x4096"
           alt="img"
         />
+        <div className="svfabjk-backside"></div>
       </div>
       <div className="screen-1">
         <p className="paragraph-1">
@@ -278,11 +284,11 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="screen-3">screen 3</div>
-      <div className="screen-4">screen 4</div>
-      <div className="screen-4">screen 5</div>
-      <div className="screen-4">screen 6</div>
-      <div className="screen-4">screen 7</div>
+      <div className="screen-3"></div>
+      <Screen4/>
+      <Screen5/>
+      <Screen6/>
+      <Screen7/>
     </div>
   );
 };

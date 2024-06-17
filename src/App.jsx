@@ -12,8 +12,9 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { GsapProvider } from "./gsapContext";
 
-gsap.registerPlugin(ScrollTrigger) 
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
@@ -33,14 +34,16 @@ function App() {
   }, []);
   const Layout = () => {
     return (
-      <div className="main">
-        <div className="container">
-          <Navbar />
-          <div className="contentContainer">
-            <Outlet />
+      <GsapProvider>
+        <div className="main">
+          <div className="container">
+            <Navbar />
+            <div className="contentContainer">
+              <Outlet />
+            </div>
           </div>
         </div>
-      </div>
+      </GsapProvider>
     );
   };
 
