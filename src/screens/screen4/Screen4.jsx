@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import "./screen4.scss";
 import { useGsap } from "../../gsapContext";
-import WavesVideo from "../../../public/videos/topo-landing.webm";
+// import WavesVideo from "../../../public/videos/topo-landing.webm";
+import WavesVideo from "/videos/topo-landing.webm";
 import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 
@@ -18,7 +19,7 @@ const Screen4 = () => {
           trigger: ".screen4",
           start: "top 140%",
           end: "bottom bottom",
-          markers: true,
+          markers: false,
           scrub: true,
         },
       },
@@ -26,17 +27,17 @@ const Screen4 = () => {
 
     timeline
       .to(".back-img-hero-pic", {
-        scale: 5,
+        scale: 15,
         rotationY: -180,
         yPercent: -100,
         transformOrigin: "center center",
-      })
-      .to(
+        // display:'none'
+      }).to(
         ".svfabjk-backside",
         {
           scale: 15,
           rotationY: 0,
-          yPercent: -100,
+          yPercent: -180,
           transformOrigin: "center center",
         },
         "<"
@@ -125,7 +126,7 @@ const Screen4 = () => {
         trigger: ".content_box-vfafbdf-6",
         start: "top 75%",
         end: "bottom 85%",
-        markers: true,
+        markers: false,
         scrub: true,
       },
     },)
@@ -158,6 +159,56 @@ const Screen4 = () => {
       yPercent:0,
       opacity:1
     },'<')
+
+
+
+    const timeline_1 = createTimeline(
+      {
+        scrollTrigger: {
+          trigger: ".box-vfafbdf-8",
+          start: "bottom bottom",
+          end: "bottom center",
+          markers: false,
+          scrub:true
+        },
+      },
+    );
+    const timeline_0 = createTimeline(
+      {
+        scrollTrigger: {
+          trigger: ".box-vfafbdf-8",
+          start: "bottom bottom",
+          end: "bottom bottom",
+          markers: false,
+          scrub:true
+        },
+      },
+    );
+
+    // down-screen4
+
+    timeline_0.to('.down-screen4',{
+      display:'none'
+    })
+
+    timeline_1
+    .to(
+      ".svfabjk-backside",
+      {
+        scale: 2,
+        rotationY: 180,
+        yPercent: -75,
+        xPercent:-25,
+        transformOrigin: "center center",
+        display:'none'
+      }
+    ).to(".back-img-hero-pic",{
+      scale: 2,
+      rotationY: 0,
+      yPercent: -75,
+      xPercent:-25,
+      transformOrigin: "center center",
+    },'<');
 
 
 

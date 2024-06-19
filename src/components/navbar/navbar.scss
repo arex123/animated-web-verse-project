@@ -285,6 +285,28 @@
         border-right: none;
         border-top-right-radius: 10px;
         width: 100%;
+        
+
+        // .scrollWatch{
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: rgba(176, 173, 173,0.3);
+        //     background-color: red;
+        //     scale: 0 1;
+
+        //     transform-origin: left;
+        //     animation: scroll-watcher linear;
+        //     animation-timeline: scroll();
+        // }
+
+        // @keyframes scroll-watcher {
+        //     to{
+        //         scale: 1 1;
+        //     }
+        // }
 
     }
+
+
+
 }

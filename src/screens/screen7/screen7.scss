@@ -1,3 +1,189 @@
-.screen7{
+.screen7 {
     min-height: 100vh;
+    // background-color: green;
+
+    display: flex;
+
+    justify-content: space-between;
+    // padding: 5%;
+    padding-top: 30rem;
+
+    // .screen7-hl {
+    //     justify-self: unset;
+    // }
+
 }
+
+.leftText-screen7 {
+    // background-color: yellowgreen;
+    padding: 0;
+}
+
+.qpowi-inner {
+    position: relative;
+
+    left: 7rem;
+
+    transform: rotateZ(-90deg);
+
+    // overflow: hidden;
+    // letter-spacing: 0;
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // justify-content: space-around;
+
+    // background-color: palevioletred;
+    height: 100%;
+    width: 100%;
+    // width: 7;
+
+    .leftText-screen7-10k {
+        // font-size: 20rem;
+        // font-family: Hexaframe,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+        // font-family: 'Hexaframe', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        font-family: Hexaframe, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+        letter-spacing: -1.5px;
+        transform: scale(20);
+        transform-origin: 42% -0.9%;
+        margin: 0;
+        padding: 0;
+        font-weight: bolder;
+    }
+
+    .post-leftText-screen7-10k {
+        margin: 0;
+        text-transform: uppercase;
+        padding: 0;
+        position: relative;
+        top: 63%;
+        font-size: 8px ;
+        left: -180%;
+
+    }
+}
+
+.rightText-screen7 {
+    // width: 100%;
+    // background
+    border-left: 1px solid gray;
+    // background-color: rebeccapurple;
+    
+    width: 30%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .text-with-bullet {
+        font-size: 8px;
+        font-weight: 500;
+        align-self: flex-start;
+        text-transform: uppercase;
+        // align-self: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 50px;
+
+
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 5px;
+            width: 5px;
+            background: black;
+        }
+    }
+
+ 
+}
+
+.crystal-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // margin-top: 30px;
+
+    .svg_crystal-view{
+        height: 240px;
+    }
+
+    #crystalVideo{
+        position: absolute;
+        height: 30%;
+        width: 50%;
+        object-fit: contain;
+    }
+}
+
+.eye-view{
+    overflow: hidden;
+    margin-top: 100px;
+    // height: 100%;
+    // width: 100%;
+    // margin: 50px 0;
+    height: 260px;
+    width: 320px;
+    position: relative;
+    border-radius: 10px;
+    // object-fit: cover;
+    margin-top: 60px;
+    .eye-view-img{
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    // .hidding-box{
+    //     background-color: white;
+    //     height: 50%;
+    //     width: 100%;
+    //     position: absolute;
+    //     border-radius: -50px;
+    //     // top: 0;
+    //     bottom: 0;
+    //     z-index: 12;
+    // }
+    .eye-view-text{
+        position: absolute;
+        top:1.2rem;
+        left: 1.5rem;
+
+        font-size: 8px;
+        font-weight: 500;
+        align-self: flex-start;
+        // align-self: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        // margin-left: 40px;
+        color: white;
+        text-transform: uppercase;
+
+
+
+        &::before {
+            content: "";
+            display: inline-block;
+            height: 5px;
+            width: 5px;
+            background: white;
+        }
+    }
+
+    // &::before{
+    //     content: '';
+    //     height: 1px;
+    //     width: 100%;
+    //     background-color: black;
+    //     position: absolute;
+    //     left: 0;
+    // }
+}
+

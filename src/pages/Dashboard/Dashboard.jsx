@@ -6,6 +6,9 @@ import Screen4 from "../../screens/screen4/Screen4";
 import Screen5 from "../../screens/screen5/Screen5";
 import Screen6 from "../../screens/screen6/Screen6";
 import Screen7 from "../../screens/screen7/Screen7";
+import Screen10 from "../../screens/screen10/Screen10";
+import Screen9 from "../../screens/screen9/Screen9";
+import Screen8 from "../../screens/screen8/Screen8";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -289,6 +292,9 @@ const Dashboard = () => {
       <Screen5/>
       <Screen6/>
       <Screen7/>
+      <Screen8/>
+      <Screen9/>
+      <Screen10/>
     </div>
   );
 };

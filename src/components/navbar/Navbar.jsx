@@ -267,7 +267,9 @@ const Navbar = () => {
         </div>
         <div className="sidebar-music-toggle">on</div>
       </div>
-      <div className="topbar"></div>
+      <div className="topbar">
+        {/* <div className="scrollWatch"></div> */}
+      </div>
     </div>
   );
 };
