@@ -50,16 +50,21 @@ const Screen7 = () => {
       }
     );
 
-    gsap.to('.screen7',{
+    let nextCards = gsap.timeline({
       scrollTrigger: {
         trigger: ".screen7",
         start: "70% 50%",
         end: "80% center",
-        markers: true,
+        // markers: true,
         scrub: true,
       },
+    })
+
+    nextCards.to('.screen7',{
       opacity: 0
     })
+
+
   }, []);
 
   return (

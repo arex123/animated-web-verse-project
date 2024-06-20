@@ -124,14 +124,10 @@
 .eye-view{
     overflow: hidden;
     margin-top: 100px;
-    // height: 100%;
-    // width: 100%;
-    // margin: 50px 0;
     height: 260px;
     width: 320px;
     position: relative;
     border-radius: 10px;
-    // object-fit: cover;
     margin-top: 60px;
     .eye-view-img{
         border-radius: 10px;
@@ -140,16 +136,7 @@
         object-fit: cover;
     }
 
-    // .hidding-box{
-    //     background-color: white;
-    //     height: 50%;
-    //     width: 100%;
-    //     position: absolute;
-    //     border-radius: -50px;
-    //     // top: 0;
-    //     bottom: 0;
-    //     z-index: 12;
-    // }
+    
     .eye-view-text{
         position: absolute;
         top:1.2rem;
@@ -177,13 +164,6 @@
         }
     }
 
-    // &::before{
-    //     content: '';
-    //     height: 1px;
-    //     width: 100%;
-    //     background-color: black;
-    //     position: absolute;
-    //     left: 0;
-    // }
+    
 }
 
