@@ -1,11 +1,154 @@
-
 @keyframes sidebarAppear {
+
     // from{
     //     transform: translateX(-40rem)
     // }
-    to{
+    to {
         // width: 40vw;
         transform: translateX(0);
     }
-    
+
+}
+
+@keyframes left-animate1 {
+
+    16% {
+        scale: 1;
+        right: -150px;
+        opacity: 1;
+    }
+
+    32% {
+        scale: 0.9;
+        right: -75px;
+        opacity: 1;
+    }
+
+    48% {
+        scale: 0.8;
+        right: 0;
+        opacity: 1;
+    }
+
+    64% {
+        scale: 0.7;
+        right: 70px;
+        opacity: 1;
+    }
+
+    80% {
+        scale: 0.6;
+        right: 140px;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0.5;
+        opacity: 0;
+        right: 170px;
+        // display: none;
+    }
+
+}
+
+@keyframes left-animate2 {
+    // 0%{
+    //     scale: 1;
+    //     right: -250px;
+    //     opacity: 1;
+        
+    // }
+
+    // 16% {
+    //     scale: 1;
+    //     right: -150px;
+    //     opacity: 1;
+    // }
+
+    0% {
+        scale: 0.98;
+        //  right: -75px;
+        right: -100px;
+        opacity: 1;
+    }
+
+    48% {
+        scale: 0.88;
+        right: -50px;
+        opacity: 1;
+    }
+
+    64% {
+        scale: 0.78;
+        right: 0;
+        opacity: 1;
+    }
+
+    80% {
+        scale: 0.68;
+        right: 50px;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0.58;
+        // opacity: 0;
+        right: 100px;
+        // display: none;
+    }
+
+}
+
+@keyframes left-animate3 {
+    // 0%{
+    //     scale: 1;
+    //     right: -250px;
+    //     opacity: 1;
+        
+    // }
+
+    // 16% {
+    //     scale: 1;
+    //     right: -150px;
+    //     opacity: 1;
+    // }
+
+    0% {
+        scale: 0.98;
+        //  right: -75px;
+        right: -100px;
+        opacity: 1;
+    }
+
+    16% {
+        scale: 0.88;
+        right: -50px;
+        opacity: 1;
+    }
+
+    48% {
+        scale: 0.78;
+        right: 0;
+        opacity: 1;
+    }
+
+    64% {
+        scale: 0.68;
+        right: 50px;
+        opacity: 1;
+    }
+
+    80% {
+        scale: 0.58;
+        right: 100px;
+        opacity: 1;
+    }
+
+    100% {
+        scale: 0.48;
+        // opacity: 0;
+        right: 100px;
+        // display: none;
+    }
+
 }

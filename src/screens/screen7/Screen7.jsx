@@ -55,7 +55,7 @@ const Screen7 = () => {
         trigger: ".screen7",
         start: "70% 50%",
         end: "80% center",
-        // markers: true,
+        markers: true,
         scrub: true,
       },
     })

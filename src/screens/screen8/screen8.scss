@@ -44,7 +44,7 @@
         // 0% 100%,
         // 0% 60%,
         // 5% 52%);
-        overflow: visible;
+        // overflow: visible;
 
         
 
@@ -54,29 +54,36 @@
             height: 100%;
             flex-direction: row-reverse;
             // min-width: 100%;
-            width: 70vw;
+            width: 75vw;
+            // justify-content: center;
+            // align-items: center;
             // background-color: blueviolet;
             position: relative;
             overflow: hidden;
 
-            @keyframes left-animate {
-                
-            }
+           
 
             & .left-img-1{
                 background-image: url(./cards/card-left-01.webp);
+                // background-color: pink;
                 height: 100%;
                 width: 290px;
                 background-position: center;
                 background-size: cover;
                 position: absolute;
                 top: 0;
-                right: -150px;
+                // right: -150px;
+                right: -20%;
                 z-index: 10;
+                // animation: left-animate2 5s ease infinite;
+                // animation-delay: 0.1s;
+                scale: 1;
+
             }
             & .left-img-2{
                 background-image: url(./cards/card-left-02.webp);
                 height: 100%;
+                // background-color: red;
                 width: 290px;
                 background-size: cover;
                 background-position: center;
@@ -84,31 +91,44 @@
                 
                 position: absolute;
                 top: 0;
-                right: -75px;
+                // right: -75px;
+                // right: -20%;
+                right: -5%;
                 z-index: 9;
+                opacity: 1;
+                // animation: left-animate3 5s ease infinite;
+                scale: 0.9;
+
             }
             & .left-img-3{
                 background-image: url(./cards/card-left-03.webp);
                 height: 100%;
+                // background-color: #0a0429;
                 width: 290px;
                 background-size: cover;
                 background-position: center;
                 
                 position: absolute;
                 top: 0;
-                right: 0;
+                right: 10%;
                 z-index: 8;
+                // animation: left-animate3 5s ease infinite;
+                scale: 0.8;
+
             }
             & .left-img-4{
                 background-image: url(./cards/card-left-04.webp);
+                // background-color: yellowgreen;
                 height: 100%;
                 width: 290px;
                 background-size: cover;
                 background-position: center;
                 position: absolute;
                 top: 0;
-                right: 70px;
+                right: 25%;
                 z-index: 7;
+                scale: 0.7;
+
             }
             & .left-img-5{
                 background-image: url(./cards/card-left-05.webp);
@@ -118,8 +138,24 @@
                 background-position: center;
                 position: absolute;
                 top: 0;
-                right: 140px;
-                z-index: 5;
+                right: 40%;
+                z-index: 6;
+                scale: 0.6;
+
+            }
+            & .left-img-6{
+                background-image: url(./cards/card-left-06.webp);
+                height: 100%;
+                width: 290px;
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                top: 0;
+                right: 55%;
+                z-index: 0;
+                scale: 0.5;
+                // opacity: 0;
+
             }
         }
         & .split-right{
@@ -128,64 +164,94 @@
             width: 100%;
             // background-color: #cccbdc;
             position: relative;
+            // display: none;
+            overflow: hidden;
 
             
-            & .right-img-1{
-                background-image: url('./cards/card-right-01.webp');
-                height: 100%;
-                width: 290px;
-                // background-size: 100% 100%;
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                top: 0;
-                left: -150px;
-                z-index: 9;
-            }
-            & .right-img-2{
-                background-image: url('./cards/card-right-02.webp');
-                height: 100%;
-                width: 290px;
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                top: 0;
-                left: -75px;
-                z-index: 8;
-            }
-            & .right-img-3{
-                background-image: url('./cards/card-right-03.webp');
-                height: 100%;
-                width: 290px;
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                top: 0;
-                left:0;
-                z-index: 7;
-            }
-            & .right-img-4{
-                background-image: url('./cards/card-right-04.webp');
-                height: 100%;
-                width: 290px;
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                top: 0;
-                left:70px;
-                z-index: 6;
-            }
-            & .right-img-5{
-                background-image: url('./cards/card-right-05.webp');
-                height: 100%;
-                width: 290px;
-                background-position: center;
-                background-size: cover;
-                position: absolute;
-                top: 0;
-                left:140px;
-                z-index: 6;
-            }
+            // & .right-img-1{
+            //     background-image: url('./cards/card-right-01.webp');
+            //     // background-color: red;
+            //     height: 100%;
+            //     width: 290px;
+            //     // background-size: 100% 100%;
+            //     background-position: center;
+            //     background-size: cover;
+            //     position: absolute;
+            //     top: 0;
+            //     left: -20%;
+            //     z-index: 10;
+            //     scale: 1;
+
+            // }
+            // & .right-img-2{
+            //     background-image: url('./cards/card-right-02.webp');
+            //     // background-color: yellowgreen;
+            //     height: 100%;
+            //     width: 290px;
+            //     background-position: center;
+            //     background-size: cover;
+            //     position: absolute;
+            //     top: 0;
+            //     left: -5%;
+            //     z-index: 9;
+            //     scale: 0.9;
+
+            // }
+            // & .right-img-3{
+            //     background-image: url('./cards/card-right-03.webp');
+            //     // background-color: blue;
+            //     height: 100%;
+            //     width: 290px;
+            //     background-position: center;
+            //     background-size: cover;
+            //     position: absolute;
+            //     top: 0;
+            //     left:10%;
+            //     z-index: 8;
+            //     scale: 0.8;
+
+            // }
+            // & .right-img-4{
+            //     background-image: url('./cards/card-right-04.webp');
+            //     // background-color: wheat;
+            //     height: 100%;
+            //     width: 290px;
+            //     background-position: center;
+            //     background-size: cover;
+            //     position: absolute;
+            //     top: 0;
+            //     left:25%;
+            //     z-index: 7;
+            //     scale: 0.7;
+
+            // }
+            // & .right-img-5{
+            //     background-image: url('./cards/card-right-05.webp');
+            //     // background-color: rgb(9, 9, 8);
+            //     height: 100%;
+            //     width: 290px;
+            //     background-position: center;
+            //     background-size: cover;
+            //     position: absolute;
+            //     top: 0;
+            //     left:40%;
+            //     z-index: 6;
+            //     scale: 0.6;
+
+            // }
+            // & .right-img-6{
+            //     background-image: url('./cards/card-right-06.webp');
+            //     // background-color: rgb(9, 9, 8);
+            //     height: 100%;
+            //     width: 290px;
+            //     background-position: center;
+            //     background-size: cover;
+            //     position: absolute;
+            //     top: 0;
+            //     left:55%;
+            //     z-index: 0;
+            //     scale: 0.5;
+            // }
             
         }
 
