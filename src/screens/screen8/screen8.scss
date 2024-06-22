@@ -24,8 +24,91 @@
     .bg-expander3{
         background-color: #968ADF;
     }
+    .screen8-content-spacer{
+        margin-top: 90%;
+
+    }
     .screen8-content{
-        display: none;
+        opacity: 0;
+        display: flex;
+        
+        .pobhvh-left{
+            position: relative;
+            width: 50%;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            // background-color: #776CB1;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & p:last-child{
+                font-size: 45px;
+                width: 80%;
+                font-weight: bolder;
+                
+            }
+            & p:first-child {
+                position: absolute;
+                top: 23%;
+                left: 2%;
+                // position:relative ;
+                // left: -100px;
+                font-size: 10px;
+                font-weight: 500;
+                // align-self: flex-start;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 5px;
+                    width: 5px;
+                    background: black;
+                }
+            }
+
+            
+        }
+        .pobhvh-right{
+            display: flex;
+            position: relative;
+            width: 50%;
+            // border: 0;
+            // border-left: 1px solid red;
+            border-bottom: 1px solid gray;
+            justify-content: center;
+            align-items: center;
+            & p:last-child{
+                font-size: 14px;
+                width: 50%;
+            }
+            & p:first-child {
+                position: absolute;
+                top: 26%;
+                left: 2%;
+                // justify-self: flex-start;
+                font-size: 8px;
+                font-weight: 500;
+                // align-self: flex-start;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+    
+    
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 5px;
+                    width: 5px;
+                    background: black;
+                }
+            }
+        }
     }
 
     .split-images{
@@ -34,7 +117,7 @@
         min-width: 290px;
         position: fixed;
         top: 50%;
-        left: 55%;
+        left: 59.7%;
         transform: translate(-60%,-45%);
         display: none;
         // clip-path: polygon(5% 0%,
@@ -154,7 +237,7 @@
                 right: 55%;
                 z-index: 0;
                 scale: 0.5;
-                // opacity: 0;
+                opacity: 0;
 
             }
         }
@@ -168,90 +251,92 @@
             overflow: hidden;
 
             
-            // & .right-img-1{
-            //     background-image: url('./cards/card-right-01.webp');
-            //     // background-color: red;
-            //     height: 100%;
-            //     width: 290px;
-            //     // background-size: 100% 100%;
-            //     background-position: center;
-            //     background-size: cover;
-            //     position: absolute;
-            //     top: 0;
-            //     left: -20%;
-            //     z-index: 10;
-            //     scale: 1;
+            & .right-img-1{
+                background-image: url('./cards/card-right-01.webp');
+                // background-color: red;
+                height: 100%;
+                width: 290px;
+                // background-size: 100% 100%;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: -20%;
+                z-index: 10;
+                scale: 1;
 
-            // }
-            // & .right-img-2{
-            //     background-image: url('./cards/card-right-02.webp');
-            //     // background-color: yellowgreen;
-            //     height: 100%;
-            //     width: 290px;
-            //     background-position: center;
-            //     background-size: cover;
-            //     position: absolute;
-            //     top: 0;
-            //     left: -5%;
-            //     z-index: 9;
-            //     scale: 0.9;
+            }
+            & .right-img-2{
+                background-image: url('./cards/card-right-02.webp');
+                // background-color: yellowgreen;
+                height: 100%;
+                width: 290px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left: -5%;
+                z-index: 9;
+                scale: 0.9;
 
-            // }
-            // & .right-img-3{
-            //     background-image: url('./cards/card-right-03.webp');
-            //     // background-color: blue;
-            //     height: 100%;
-            //     width: 290px;
-            //     background-position: center;
-            //     background-size: cover;
-            //     position: absolute;
-            //     top: 0;
-            //     left:10%;
-            //     z-index: 8;
-            //     scale: 0.8;
+            }
+            & .right-img-3{
+                background-image: url('./cards/card-right-03.webp');
+                // background-color: blue;
+                height: 100%;
+                width: 290px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left:10%;
+                z-index: 8;
+                scale: 0.8;
 
-            // }
-            // & .right-img-4{
-            //     background-image: url('./cards/card-right-04.webp');
-            //     // background-color: wheat;
-            //     height: 100%;
-            //     width: 290px;
-            //     background-position: center;
-            //     background-size: cover;
-            //     position: absolute;
-            //     top: 0;
-            //     left:25%;
-            //     z-index: 7;
-            //     scale: 0.7;
+            }
+            & .right-img-4{
+                background-image: url('./cards/card-right-04.webp');
+                // background-color: wheat;
+                height: 100%;
+                width: 290px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left:25%;
+                z-index: 7;
+                scale: 0.7;
 
-            // }
-            // & .right-img-5{
-            //     background-image: url('./cards/card-right-05.webp');
-            //     // background-color: rgb(9, 9, 8);
-            //     height: 100%;
-            //     width: 290px;
-            //     background-position: center;
-            //     background-size: cover;
-            //     position: absolute;
-            //     top: 0;
-            //     left:40%;
-            //     z-index: 6;
-            //     scale: 0.6;
+            }
+            & .right-img-5{
+                background-image: url('./cards/card-right-05.webp');
+                // background-color: rgb(9, 9, 8);
+                height: 100%;
+                width: 290px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left:40%;
+                z-index: 6;
+                scale: 0.6;
 
-            // }
-            // & .right-img-6{
-            //     background-image: url('./cards/card-right-06.webp');
-            //     // background-color: rgb(9, 9, 8);
-            //     height: 100%;
-            //     width: 290px;
-            //     background-position: center;
-            //     background-size: cover;
-            //     position: absolute;
-            //     top: 0;
-            //     left:55%;
-            //     z-index: 0;
-            //     scale: 0.5;
-            // }
+            }
+            & .right-img-6{
+                background-image: url('./cards/card-right-06.webp');
+                // background-color: rgb(9, 9, 8);
+                height: 100%;
+                width: 290px;
+                background-position: center;
+                background-size: cover;
+                position: absolute;
+                top: 0;
+                left:55%;
+                z-index: 0;
+                scale: 0.5;
+                opacity: 0;
+
+            }
             
         }
 
