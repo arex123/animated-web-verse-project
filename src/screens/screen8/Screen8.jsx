@@ -13,6 +13,10 @@ import rightimg2 from "/cards/card-right-02.webp";
 import rightimg3 from "/cards/card-right-03.webp";
 import rightimg4 from "/cards/card-right-04.webp";
 import rightimg5 from "/cards/card-right-05.webp";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Screen8 = () => {
   useEffect(() => {
@@ -813,7 +817,7 @@ const Screen8 = () => {
         trigger: ".screen8-content",
         start: "top 40%",
         end: "bottom top",
-        markers:true,
+        // markers:true,
         scrub: true,
         // pin:true
       },
@@ -824,16 +828,16 @@ const Screen8 = () => {
     }).to('.screen8-content',{
       y:-250
     },'<').to('.split-images',{
-      y:1,
-      duration:1
-    },'<').fromTo('.pobhvh-left',{
-      width:'30%'
-    },{
-      
-      width:'50%'
-    }
-    
-    ,'<')
+      top:'60%'
+    },'<')
+    .to('.split-right',{
+      width:"40vw"
+    },'<').to('.split-left',{
+      width:"40vw"
+    },'<')
+    // .to('.split-left',{
+    //   width:'40vw'
+    // },'<')
 
     //pinning at top
     let contentBoxTL1 = gsap.to('.screen8-content',{
@@ -843,77 +847,29 @@ const Screen8 = () => {
         end: "1000% top",
         markers:true,
         scrub: true,
-        pin:true
+        pin:true,
+        // :cardTimelines
       },
       // y:-500
     })
-
-
    
-    // let contentBoxTL1 = gsap.to('.screen8-content',{
+    // let contentBoxTL2 = gsap.timeline({
     //   scrollTrigger: {
     //     trigger: ".screen8-content",
-    //     start: "top 8%",
-    //     // start: "top 40%",
-    //     end: "1000% top",
-    //     // end: "center center",
-    //     // markers:true,
-    //     scrub: true,
-    //     pin:true
-    //   },
-      
-
-    // })
-
-    // contentBoxTL.to('.screen8-content',{
-    //   opacity:1,
-    //   display:'flex'
-    // }).to('.screen8-content',{
-    //   scrollTrigger: {
-    //     trigger: ".screen8-content",
-    //     start: "top 8%",
-    //     // start: "top 40%",
-    //     end: "1000% top",
-    //     // end: "center center",
-    //     // markers:true,
-    //     scrub: true,
-    //     pin:true
-    //   },
-
-    // })
-
-    // let contentTL = gsap.to('.screen8-content',{
-    //   // pin:true,
-    //   opacity:1,
-    //   // yPercent:-200
-    //   // position:'fixed',
-    //   display:'flex'
-    //   // top:'10%'
-    // });
-    // let contentpinTL1 = gsap.to('.screen8-content',{
-    //   scrollTrigger: {
-    //     // trigger: ".pobhvh-left",
-    //     start: "top 8%",
-    //     // start: "top 40%",
-    //     end: "1000% top",
-    //     // end: "center center",
-    //     pin:true,
+    //     start: "40% center",
+    //     end: "bottom bottom",
     //     markers:true,
     //     scrub: true,
+    //     onEnter:()=>{console.log("entering calling")},        
+    //     // onLeave:()=>{console.log("leaving calling")}        
+    //     onLeave:()=>{cardTimelines()}
     //   },
+    // })
+   
+
+
     
-    // });
-    // let cardsScrollDownTL = gsap.to('.split-images',{
-    //   scrollTrigger: {
-    //     trigger: ".screen8-content",
-    //     start: "top 8%",
-    //     end: "bottom 10%",
-    //     markers:true,
-    //     scrub: true,
-    //     pin:true
-    //   },
-    //   // xPercent:20
-    // });
+
   }, []);
   return (
     <div className="screen8">
