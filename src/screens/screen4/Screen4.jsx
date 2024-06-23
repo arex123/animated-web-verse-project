@@ -98,7 +98,7 @@ const Screen4 = () => {
         trigger: ".p-1-box-vfafbdf-2",
         start: "top 100%",
         end: "100vh 65%",
-        toggleActions: "restart none none none",
+        // toggleActions: "restart restart restart restart",
         markers: false,
       },
     })

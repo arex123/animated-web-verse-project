@@ -85,7 +85,12 @@ const Screen8 = () => {
       )
   
 
+      let cardTLs = []
     function cardTimelines() {
+
+
+      cardTLs.forEach(cardtl=>cardTLs.kill())
+
       let leftcardtl1 = gsap.timeline({
         repeat: -1,
         repeatDelay: 0.4,
@@ -805,6 +810,8 @@ const Screen8 = () => {
           "+=0.4"
         );
 
+
+      cardTLs.push(rightcardtl6,rightcardtl5,rightcardtl4,rightcardtl3,rightcardtl2,rightcardtl1,leftcardtl6,leftcardtl5,leftcardtl4,leftcardtl3,leftcardtl2,leftcardtl1)
       /*********************************** */
       /*********************************** */
     }
@@ -848,7 +855,8 @@ const Screen8 = () => {
         markers:true,
         scrub: true,
         pin:true,
-        // :cardTimelines
+        toggleActions: "restart none none none",
+        onEnter:cardTimelines
       },
       // y:-500
     })
