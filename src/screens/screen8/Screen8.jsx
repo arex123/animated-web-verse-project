@@ -815,9 +815,7 @@ const Screen8 = () => {
       /*********************************** */
       /*********************************** */
     }
-
-
-
+   
 
     let contentBoxTL = gsap.timeline({
       scrollTrigger: {
@@ -851,32 +849,20 @@ const Screen8 = () => {
       scrollTrigger: {
         trigger: ".screen8-content",
         start: "top 40%",
-        end: "1000% top",
+        end: "500% top",
         markers:true,
         scrub: true,
         pin:true,
         toggleActions: "restart none none none",
-        onEnter:cardTimelines
+        onEnter:cardTimelines,
+        
       },
-      // y:-500
     })
-   
-    // let contentBoxTL2 = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: ".screen8-content",
-    //     start: "40% center",
-    //     end: "bottom bottom",
-    //     markers:true,
-    //     scrub: true,
-    //     onEnter:()=>{console.log("entering calling")},        
-    //     // onLeave:()=>{console.log("leaving calling")}        
-    //     onLeave:()=>{cardTimelines()}
-    //   },
-    // })
-   
-
 
     
+   
+    
+
 
   }, []);
   return (

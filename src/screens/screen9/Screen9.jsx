@@ -4,9 +4,10 @@ import './screen9.scss'
 const Screen9 = () => {
   useEffect(()=>{
 
+    
   },[])
   return ( 
-    <div className='screen9'></div>
+    <div className='screen9'>screen9</div>
   )
 }
 
