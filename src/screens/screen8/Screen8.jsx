@@ -850,7 +850,7 @@ const Screen8 = () => {
         trigger: ".screen8-content",
         start: "top 40%",
         end: "500% top",
-        markers:true,
+        // markers:true,
         scrub: true,
         pin:true,
         toggleActions: "restart none none none",
@@ -859,7 +859,7 @@ const Screen8 = () => {
       },
     })
 
-    
+
    
     
 
