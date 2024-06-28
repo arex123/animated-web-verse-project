@@ -219,6 +219,9 @@ const Screen4 = () => {
 
   return (
     <div className="screen4">
+      {/* <div className="svg_img">
+
+      </div> */}
       <div className="box-vfafbdf-1">
         <div className="line1-box-vfafbdf">
           <p className="index_title_screen-4_pre">002</p>
