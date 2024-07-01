@@ -23,7 +23,7 @@ const Dashboard = () => {
       let mouseX = event.clientX - centerX;
       let mouseY = event.clientY - centerY;
 
-      console.log("x", mouseX, mouseY);
+      // console.log("x", mouseX, mouseY);
 
       let rotateX = (-1 * 15 * mouseY) / (cardH / 2);
       let rotateY = (15 * mouseX) / (cardW / 2);
@@ -85,7 +85,7 @@ const Dashboard = () => {
       duration: 1,
     });
 
-    console.log("innerHeight ", innerHeight);
+    // console.log("innerHeight ", innerHeight);
 
     // paragraph animation onScroll
     let screen1TL = gsap.timeline({

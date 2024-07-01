@@ -18,11 +18,11 @@ const Navbar = () => {
   const textScruble = (event) => {
     let currElement = event.target;
     // currElement.style.color="pink"doc
-    console.log("hovered");
+    // console.log("hovered");
 
     let originalText = currElement.getAttribute("data");
 
-    console.log("original text ", originalText);
+    // console.log("original text ", originalText);
 
     
     createInnerChildren()
@@ -34,7 +34,7 @@ const Navbar = () => {
       let mainTimeline = gsap.timeline({
         // repeat:-1 //infinite repeat
       })
-      console.log("mainTimeline.isActive: ")
+      // console.log("mainTimeline.isActive: ")
       let chars = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
       for(let k=0; k <= i+1; k++) {
         const timeline = gsap.timeline({});

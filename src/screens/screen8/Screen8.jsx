@@ -85,11 +85,11 @@ const Screen8 = () => {
       )
   
 
-      let cardTLs = []
+    let cardTLs = []
     function cardTimelines() {
 
 
-      cardTLs.forEach(cardtl=>cardTLs.kill())
+      cardTLs.forEach(cardtl=>cardtl.kill())
 
       let leftcardtl1 = gsap.timeline({
         repeat: -1,
@@ -815,6 +815,10 @@ const Screen8 = () => {
       /*********************************** */
       /*********************************** */
     }
+    function endCardTimeline(){
+      console.log("enter scren9")
+      cardTLs.forEach(cardtl=>cardtl?.kill())
+    }
    
 
     let contentBoxTL = gsap.timeline({
@@ -858,6 +862,25 @@ const Screen8 = () => {
         
       },
     })
+
+    let screen9Tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".screen9",
+        start: "top bottom",
+        end: "bottom top",
+        markers:true,
+        scrub: 1,
+        onEnter:endCardTimeline
+      },
+    });
+
+    screen9Tl.to('.split-left',{
+      width:"10vw"
+    },'<').to('.split-right',{
+      width:"10vw"
+    },'<').to('.split-images',{
+      // rotationY:90
+    },'<')
 
 
    
