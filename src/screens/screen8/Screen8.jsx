@@ -817,7 +817,7 @@ const Screen8 = () => {
     }
     function endCardTimeline(){
       console.log("enter scren9")
-      cardTLs.forEach(cardtl=>cardtl?.kill())
+      cardTLs.forEach(cardtl=>cardtl?.pause())
     }
    
 
@@ -880,7 +880,9 @@ const Screen8 = () => {
       width:"10vw"
     },'<').to('.split-images',{
       // rotationY:90
-    },'<')
+    },'<').to('.screen8-content',{
+      yPercent:-100
+    })
 
 
    
